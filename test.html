@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Первый проект по JS</title>
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="test.css" />
+    </head>
+
+    <body>
+        
+        <h1 id="headTitle"></h1>
+        
+        <div>
+            <label for="planer"></label>
+            <input name="planer" type="text" id="planer" />
+            <button id="button" for="planer" onclick="makeList()">Добавить</button>    
+        </div>
+
+        <script>
+            let userName= prompt('Введите свое имя:');
+
+            let myTitle = document.getElementById('headTitle');
+
+            if(userName) {
+                myTitle.innerHTML = "Привет, " + userName + "!";
+            } else {
+                myTitle.innerHTML = "Привет, " + "анонимный пользователь!";
+            }
+
+            let myPlaner = document.getElementById('planer');
+            let count = 0
+
+            function makeList() {
+                count +=1
+                
+                if(count <= 5) {
+                    myPlaner.innerHTML = myPlaner.innerHTML + counyt + '. ' + myPlaner + ";";
+                } else {
+                myPlaner.innerHTML = userName + ', у нас уже есть 5 дел. Давай сначала выполним их, а потом будем добавлять новые ;-)';
+                }
+            }
+
+                
+    
+          
+        </script>
+    </body>
+</html>
